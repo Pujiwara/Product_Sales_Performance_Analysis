@@ -1,4 +1,4 @@
-# Product_Sales_Performance_Analysis
+# Product Sales Performance Analysis
 Project Title:
 Product Sales Performance Analysis
 
@@ -7,36 +7,62 @@ Dashboard Preview:
 ![page2](https://github.com/Pujiwara/Pictures/blob/main/Product%20Sales%20Performance_page-0002.jpg)
 
 Description:
-This project is a comprehensive analysis of the Product Sales Dataset. This dataset contains 200,000 synthetic sales records simulating real-world product transactions across different U.S. regions.
-The main goal of this project is to build a complete end-to-end analytics pipeline, starting from PostgreSQL data warehouse design, ETL transformations, and culminating in an interactive Power BI dashboard for business insight exploration.
-
-Tools Used:
-PostgreSQL, 
-Power BI
-
-Key Insights:
-1. Revenue is led by the Electronics category (40%+ or 57M). High-value products such as laptops, smartphones, and wearables contribute to nearly half of the total revenue.
-2. The largest revenue contributor is the East region (45M). Marketing and inventory strategies should prioritize the East and West regions.
-3. The top products by revenue are the Tempur-Pedic Mattress and Instant Pot. These high-priced items generate significant revenue and can be leveraged through upselling strategies.
-4. The profit margin of 22.15% is relatively stable. The business is performing well but can further improve by focusing on high-margin categories (bedding, mattresses).
-5. California is the highest-revenue state. There is potential to expand into lower-performing states.
-6. Several apparel categories generate low revenue (Kids Wear, Bags, Wearable Accessories). These small categories can be evaluated for: stop-loss decisions, rebranding, or bundling promotions.
+This case study presents a comprehensive analysis of a synthetic Product Sales Dataset containing 200,000 transaction records across multiple regions in the United States. The project was designed to simulate a real-world business analytics scenario and demonstrate an end-to-end data analytics workflow.
+The analysis covers the full pipeline, starting from raw data ingestion and cleaning, followed by PostgreSQL data warehouse design using a star schema, and culminating in an interactive Power BI dashboard. The dashboard enables stakeholders to monitor sales performance, identify high-performing products and regions, and support data-driven business decision-making.
 
 Dataset:
 https://www.kaggle.com/datasets/yashyennewar/product-sales-dataset-2023-2024
 
-Data Warehouse Star Schema Components:
-fact_orders, 
-dim_dates, 
-dim_customers, 
-dim_products
+# Analytical Approach
+### Methods
+The analysis followed a structured, end-to-end analytics methodology:
+- **Data Ingestion**
+    Raw CSV data was loaded into PostgreSQL using a dedicated `raw` schema.
+- **Data Cleaning & Validation (ETL)**
+    Data quality checks and transformations were performed in a `staging` schema, including:
+    - Date format standardization
+    - Handling missing and invalid values
+    - Numeric validation for revenue, profit, and quantity
+    - Text normalization for categorical fields
+- **Data Warehouse Design**
+    A **star schema** was implemented to support analytical queries efficiently:
+    - Fact table: `fact_orders`
+    - Dimension tables: `dim_dates`, `dim_customers`, `dim_products`
+- **Business Intelligence & Visualization**
+    The curated data warehouse was connected to Power BI to create an interactive, insight-driven dashboard.
 
-Key steps in the ETL workflow include:
-1. Standardizing date formats
-2. Data cleaning and validation
-3. Key mapping between fact and dimension tables
+### Dashboard Structure
+1. **Summary Overview**
+    Key KPIs: Total Revenue, Total Profit, Profit Margin, AOV, Total Orders
+    Revenue & Profit trend over time
+    Revenue distribution by region
+    Revenue by product category
+2. **Product & Customer Insights**
+    Top 10 products by revenue and profit
+    Revenue by sub-category
+    Revenue distribution by customer state
+    Customer and order-level performance metrics
 
-Power BI Dashboard Structure:
-The dashboard is organized into two main pages:
-1. Summary Overview
-2. Customer and Product Insight
+### Tools
+- **PostgreSQL** — Data storage, Data cleaning, validation, transformation, dimensional modeling, ETL processing, and data warehouse implementation
+- **Power BI** — Data modeling, DAX calculations, and dashboard visualization
+
+# Key Insight
+- Revenue is dominated by the **Electronics** category, contributing over **40% (≈57M)** of total revenue, driven by high-value products such as laptops, smartphones, and wearables.
+- The overall **profit margin of 22.15%** indicates a healthy business performance, with opportunities for further optimization.
+- The **East region** is the largest revenue contributor (**45M**), followed by the West and Central regions, indicating where marketing and inventory focus should be prioritized.
+- **California** stands out as the highest-revenue state, while several states show underperformance and potential for market expansion.
+- **Tempur-Pedic Mattress** and **Instant Pot** are the top revenue-generating products, highlighting the strong impact of premium-priced items.
+- Certain apparel sub-categories generate relatively low revenue, suggesting possible inefficiencies in product assortment.
+
+# Business Recommendations
+- **Focus on High-Value Categories:**
+    Allocate more resources to Electronics and high-margin home products to maximize revenue and profitability.
+- **Regional Optimization:**
+    Strengthen marketing campaigns and inventory availability in the East and West regions while developing targeted growth strategies for underperforming regions.
+- **Upselling & Bundling Strategies:**
+    Leverage top-selling, high-priced products with complementary add-ons or bundles to increase average order value.
+- **Category Rationalization:**
+    Review low-performing apparel categories for potential stop-loss decisions, rebranding, or bundling promotions.
+- **Geographic Expansion:**
+    Develop localized marketing strategies to improve penetration in lower-performing states and reduce over-reliance on top states.
