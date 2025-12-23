@@ -2,6 +2,10 @@
 Project Title:
 Product Sales Performance Analysis
 
+Link notion page:
+[(English version)](https://www.notion.so/ekapujiwara/Product-Sales-Performance-Analysis-2cdc5d1ee80d80f2a1abf0e527c6e144?source=copy_link)
+[(versi Bahasa Indonesia)](https://www.notion.so/ekapujiwara/Product-Sales-Performance-Analysis-2cec5d1ee80d81c1ae52f0c41dee72ed?source=copy_link)
+
 Dashboard Preview:
 ![page1](https://github.com/Pujiwara/Pictures/blob/main/Product%20Sales%20Performance_page-0001.jpg)
 ![page2](https://github.com/Pujiwara/Pictures/blob/main/Product%20Sales%20Performance_page-0002.jpg)
